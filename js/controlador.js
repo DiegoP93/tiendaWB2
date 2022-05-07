@@ -28,8 +28,7 @@ let boton=document.getElementById("addalcarrito")
 boton.addEventListener("click",function(event){
 
     //capturar cantidad del producto/solo se aplica para sacar informacion de los formularios
-    let cantidad=document.getElementById("cantidadproducto").value;   
-
+    let cantidad=document.getElementById("cantidadproducto").value;
 
     //agregar la cantidad al objeto producto
 
@@ -66,7 +65,6 @@ boton.addEventListener("click",function(event){
         let totalNeto = document.getElementById("totalNeto");
         totalNeto.innerHTML = sumaPrecio; 
         pintarCarrito(suma);
-        modalinfoproducto.hide();
 
     })
     
