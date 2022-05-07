@@ -1,0 +1,39 @@
+.fondomovil{
+    background-image: url("img/fondokratos.jpg");
+    background-attachment: fixed;
+    height: 450px;
+    
+}
+/* footer */
+
+.footer-style {
+    padding-top: 50px;
+    background-color: #000000;
+}
+footer {
+  color: hsl(0, 0%, 100%);
+  background-color: #000000;
+}
+footer h3 {
+  margin-bottom: 30px;
+    font-weight: 800;
+}
+footer .footer-above {
+  padding-top: 50px;
+  background-color: #2C3E50;
+}
+footer .footer-col {
+  margin-bottom: 50px;
+}
+footer .footer-below {
+  padding: 25px 0;
+  background-color: #233140;
+}
+
+.icono{
+  font-size: 30px;
+}
+
+.foto{
+  height: 300px;
+}
