@@ -8,15 +8,18 @@ pintarCarrito()
 //objeto vacio
 let producto={}
 
+let dolar = 0.00024;
+let totusd;
+let modalinfoproducto;
+
 let contenedorTienda=document.getElementById("fila")
 contenedorTienda.addEventListener("click",function(event){
 
-    let modalinfoproducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
+ modalinfoproducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
     producto=ampliarInformacion(event)
     if(event.target.classList.contains("btn")){
         modalinfoproducto.show()
     }
-    
 })
 //accion de añadir al carrito
 
@@ -49,6 +52,7 @@ boton.addEventListener("click",function(event){
 
     carrito.push(producto);
 
+    modalinfoproducto.hide()
     }
 
     //calcula la sumatoria de cantidad
@@ -64,13 +68,14 @@ boton.addEventListener("click",function(event){
         
         let totalNeto = document.getElementById("totalNeto");
         totalNeto.innerHTML = sumaPrecio; 
+        totusd = sumaPrecio *  dolar;
         pintarCarrito(suma);
 
     })
+  
     
-   
 
-   /*let modalinfoproducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
+ /*let modalinfoproducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
     modalinfoproducto.hide()*/
    
 })
@@ -85,8 +90,14 @@ limpiarcarro.addEventListener("click",function(event){
     capsula.classList.add("invisible");
     //borrar contenido html de una sección
     contenedor.innerHTML = "";
-    totalNeto.innerHTML = "";   
+    totalNeto.innerHTML = "";
+    totalusd.innerHTML = "";   
 });
+let Convertir=document.getElementById("convertir")
+Convertir.addEventListener("click",function(event){
+let totalusd=document.getElementById("totalusd");
+totalusd.innerHTML= totusd;
+})
 
 
 //ver resumen de venta
